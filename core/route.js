@@ -1,7 +1,10 @@
-import Common from "./common.js";
+import CommonHTR from "./common.js";
 
-const Routing = {
+const RouteHTR = {
+    storage : [],
+
     path : window.location.pathname,
+
     set : () => {
         const xhr   = new XMLHttpRequest();
         xhr.open("GET", `/data/route.json`, true);
@@ -10,21 +13,26 @@ const Routing = {
         xhr.onloadend = () => {
             if(xhr.status === 200){
                 if(xhr.response.length > 0){
-                    xhr.response.filter(map => {
-                        Routing.path === map.path ? Common.render(map.file) : Common.notfound();
-                    });
+                    const mappingRoute = xhr.response.find(map => RouteHTR.path === map.path);
+                    if (mappingRoute) {
+                        CommonHTR.render(mappingRoute.file);
+                    } else {
+                        CommonHTR.notfound();
+                    }
+
+                    RouteHTR.storage.push(...xhr.response);
                 } else {
-                    Common.notfound();
+                    CommonHTR.notfound();
                 }
             } else 
             if(xhr.status !== 200){
                 setTimeout(() => {
                     document.getElementById("app_root").innerHTML = `<center><h1>${xhr.status} - ${xhr.statusText}</h1></center>`;
-                }, 0);
+                }, 100);
             }
         };
         xhr.send();
     }
 }
 
-export default Routing;
+export default RouteHTR;

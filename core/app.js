@@ -1,13 +1,13 @@
-import Routing from "./route.js";
-import Common from "./common.js";
+import RouteHTR from "./route.js";
+import CommonHTR from "./common.js";
 
-const App = {
+const AppHTR = {
     run : () => {
         document.open();
-        Common.root();
-        Routing.set();
+        CommonHTR.root();
+        RouteHTR.set();
         document.close();
     }
 }
 
-export default App;
+export default AppHTR;

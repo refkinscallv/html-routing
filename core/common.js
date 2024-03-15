@@ -1,4 +1,4 @@
-const Common = {
+const CommonHTR = {
     root : () => {
         document.write(`<main id="app_root"></main>`);
     },
@@ -25,7 +25,7 @@ const Common = {
             }
         };
         xhr.send();
-    },
+    }
 }
 
-export default Common;
+export default CommonHTR;

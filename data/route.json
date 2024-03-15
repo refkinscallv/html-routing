@@ -2,5 +2,9 @@
     {
         "path" : "/",
         "file" : "welcome.html"
+    },
+    {
+        "path" : "/about",
+        "file" : "about.html"
     }
 ]
