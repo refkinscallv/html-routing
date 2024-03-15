@@ -13,8 +13,8 @@ HTML Routing is a lightweight HTML JavaScript routing library designed to simpli
 
 ## How To Use
 
-1. **Download Source**: Begin by downloading the source code of HTML Routing **[Here](https://github.com/refkinscallv/html-routing/archive/refs/heads/master.zip)**.
-2. **Fill in route.json Data**: Populate the route.json file located in the `data/route.json` folder with the necessary routing data.
+- **Download Source**: Begin by downloading the source code of HTML Routing **[Here](https://github.com/refkinscallv/html-routing/archive/refs/heads/master.zip)**.
+- **Fill in route.json Data**: Populate the route.json file located in the `data/route.json` folder with the necessary routing data.
 
 ### route.json Format
 
